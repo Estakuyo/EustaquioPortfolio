@@ -1,0 +1,341 @@
+:root {
+  --background-color: #0f1021; /* deep dark blue/purple */
+  --background-color-light: #1a1b2f; /* slightly lighter dark */
+  --text-color: #f8f8f2; /* off-white */
+  --text-color-minor: #b8b8b8; /* light gray for minor text */
+  --card-color: #232946; /* dark blue for cards */
+  --navbar-color: #181926; /* dark purple for navbar */
+  --title-color: #ff00e0; /* neon pink for titles */
+  --divider-color: #00fff780; /* semi-transparent neon cyan for dividers */
+  --accent-color: #00fff7; /* neon cyan */
+  --highlight-color: #ffe600; /* neon yellow */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+body h1 {
+  color: var(--title-color);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slide-left 1s ease-in-out;
+}
+
+.hero-content h2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-icons svg {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons svg:hover {
+  color: var(--highlight-color);
+  transform: scale(1.1);
+}
+
+.resume-btn {
+  padding: 12px 30px;
+  background-color: var(--highlight-color);
+  color: var(--background-color);
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  box-shadow: 0 0 20px var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.hero-section img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 0 0 20px var(--accent-color);
+  animation: slide-right 1s ease-in-out;
+}
+
+/* About Education Section */
+.about-section {
+  background-color: var(--background-color-light);
+  display: flex;
+  margin-bottom: 20px;
+  animation: slide-right 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.about-content {
+  width: 60%;
+  text-align: justify;
+  line-height: 2.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+.about-content h1 {
+  font-size: 2rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+}
+
+.about-section img {
+  width: 40%;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  opacity: 0.6;
+}
+
+/* Education Section */
+.education-section {
+  background-color: var(--background-color-light);
+  display: flex;
+  position: relative;
+  margin-bottom: 100px;
+  animation: slide-left 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.education-content {
+  width: 60%;
+  text-align: justify;
+  line-height: 2.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+.education-content h1 {
+  font-size: 2rem;
+}
+
+.education-content p {
+  font-size: 1.1rem;
+}
+
+.education-section .bg2 {
+  width: 40%;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  opacity: 0.6;
+}
+
+.school1,
+.school2 {
+  width: 10%;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+}
+
+.school1 {
+  top: 10%;
+  right: 15%;
+}
+
+.school2 {
+  top: 40%;
+  right: 7.5%;
+}
+
+/* Skills Section */
+.skills-section {
+  display: block;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.skills-content h1 {
+  font-size: 2rem;
+  margin-bottom: 60px;
+  animation: fade 0.5s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.skills-content .logoLoop {
+  height: "200px";
+  position: "relative";
+  overflow: "hidden";
+}
+
+.logo-loop1 {
+  animation: slide-right 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.logo-loop2 {
+  animation: slide-left 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+/* Project Section */
+.project-section {
+  display: block;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.project-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.project-content p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: var(--text-color-minor);
+}
+
+.project-content h1,
+.project-content p {
+  animation: bounce-up 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  animation: bounce-up 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+/* Footer or Contact Me Section */
+footer {
+  height: 10vh;
+  background-color: var(--background-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  color: var(--text-color-minor);
+  line-height: 1.5;
+}
+
+/* Navigation margin */
+.skills-section {
+  scroll-margin-top: 120px;
+}
+
+/* Animations */
+@keyframes slide-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bounce-up {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Screen Responsiveness */
+@media (max-width: 1200px) {
+  .hero-section {
+    gap: 40px;
+  }
+  .about-content,
+  .education-content {
+    padding: 40px;
+  }
+  .about-content h1,
+  .education-content h1 {
+    font-size: 1.5rem;
+  }
+  .about-content p,
+  .education-content p {
+    font-size: 1rem;
+  }
+  .school1,
+  .school2 {
+    width: 120px;
+    height: 120px;
+  }
+}
