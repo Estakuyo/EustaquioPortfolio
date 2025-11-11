@@ -1,9 +1,6 @@
 import "./App.css";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
-// Resume
-import Resume from "./assets/resume.pdf";
-
 // Images
 import ProfilePic from "./assets/profilePic.jpg";
 import CyberPunk1 from "./assets/bg1.jpg";
@@ -69,7 +66,7 @@ function App() {
               <FaFacebook />
             </a>
             <a
-              href={Resume}
+              href="/resume.pdf"
               download="John_Martin_Eustaquio_Resume.pdf"
               className="resume-btn"
             >
