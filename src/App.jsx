@@ -66,11 +66,11 @@ function App() {
               <FaFacebook />
             </a>
             <a
-              href="/resume.pdf"
+              href="/John_Martin_Eustaquio_Resume.pdf"
               download="John_Martin_Eustaquio_Resume.pdf"
               className="resume-btn"
             >
-              View Resume
+              View CV
             </a>
           </div>
         </div>
